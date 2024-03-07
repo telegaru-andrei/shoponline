@@ -1,0 +1,10 @@
+<mat-card *ngFor="let item of itemList" class = "card-item">
+  <mat-card-content>
+    <p>Title: {{item.title}}</p>
+    <p>Description: {{item.description}}</p>
+    <p>ImageUrl: {{item.imageUrl}}</p>
+    <p>Price: {{item.price}}</p>
+
+    <button mat-raised-button color="primary" (click) = "onDelete(item)">Delete</button>
+  </mat-card-content>
+</mat-card>
