@@ -5,6 +5,8 @@
     <p>ImageUrl: {{item.imageUrl}}</p>
     <p>Price: {{item.price}}</p>
 
-    <button mat-raised-button color="primary" (click) = "onDelete(item)">Delete</button>
+    <button mat-raised-button color="primary"  *ngIf="showByButton == false" (click) = "onDelete(item)">Delete</button>
+    <button mat-raised-button color="primary" *ngIf="showByButton == false" (click) = "onUpdate(item)">Update</button>
+    <button mat-raised-button color="primary" *ngIf="showByButton == true" (click) = "onBuy(item)">Buy</button>
   </mat-card-content>
 </mat-card>

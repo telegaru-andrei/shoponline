@@ -13,18 +13,25 @@ export class ItemService {
 
   constructor(private httpClient:HttpClient) {
   }
-  public create(item: any){
+  public create(item: Item){
     const body = {
       title: item.title,
       description: item.description,
       imageUrl: item.imageUrl,
       price: item.price
     };
-
     return this.httpClient.post(this.apiUrl, body);
     }
 
-  public update(item: any){
+  public update(item: Item){
+    const body = {
+      id: item.id,
+      title: item.title,
+      description: item.description,
+      imageUrl: item.imageUrl,
+      price: item.price
+    };
+    return this.httpClient.put(this.apiUrl, body);
   }
   public delete(id: string){
     return this.httpClient.delete(this.apiUrl + "/" + id);

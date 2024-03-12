@@ -1,3 +1,21 @@
-.card-container{
-  display: table-caption;
+
+.example-sidenav-content {
+  height: 100%;
+  align-items: center;
+  justify-content: center;
 }
+
+.drawer-meniu {
+  padding: 20px;
+  width: 200px;
+}
+
+.card-item-meniu{
+  margin-top: 16px;
+  background-color: crimson;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
